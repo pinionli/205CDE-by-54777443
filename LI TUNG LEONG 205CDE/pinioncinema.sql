@@ -1,0 +1,172 @@
+-- phpMyAdmin SQL Dump
+-- version 4.7.9
+-- https://www.phpmyadmin.net/
+--
+-- 主機: 127.0.0.1
+-- 產生時間： 2018-03-21 04:19:10
+-- 伺服器版本: 10.1.31-MariaDB
+-- PHP 版本： 7.2.3
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- 資料庫： `pinioncinema`
+--
+
+-- --------------------------------------------------------
+
+--
+-- 資料表結構 `staff`
+--
+
+CREATE TABLE `staff` (
+  `name` text NOT NULL,
+  `pw` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- 資料表的匯出資料 `staff`
+--
+
+INSERT INTO `staff` (`name`, `pw`) VALUES
+('1234', '1234');
+
+-- --------------------------------------------------------
+
+--
+-- 資料表結構 `today_rooma`
+--
+
+CREATE TABLE `today_rooma` (
+  `period1` text NOT NULL,
+  `period2` text NOT NULL,
+  `period3` text NOT NULL,
+  `period4` text NOT NULL,
+  `period5` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- 資料表的匯出資料 `today_rooma`
+--
+
+INSERT INTO `today_rooma` (`period1`, `period2`, `period3`, `period4`, `period5`) VALUES
+('100000000000001001111111111111111111111111111111111111111', '111111111111111111111111111111111111111111111111111111111', '111111111111111111111111111111111111111111111111111111111', '111111111111111111111111111111111111111111111111111111111', '111111111111111111111111111111111111111111111111111111111');
+
+-- --------------------------------------------------------
+
+--
+-- 資料表結構 `today_roomb`
+--
+
+CREATE TABLE `today_roomb` (
+  `period1` text NOT NULL,
+  `period2` text NOT NULL,
+  `period3` text NOT NULL,
+  `period4` text NOT NULL,
+  `period5` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- 資料表的匯出資料 `today_roomb`
+--
+
+INSERT INTO `today_roomb` (`period1`, `period2`, `period3`, `period4`, `period5`) VALUES
+('111111111111111111111111111111111111111111110111010101111', '111111111111111111111111111111111111111111111111111111111', '111111111111111111111111111111111111111111111111111111111', '111111111111111111111111111111111111111111111111111111011', '111111111101111111111111111110111111101111111111111111111');
+
+-- --------------------------------------------------------
+
+--
+-- 資料表結構 `today_roomc`
+--
+
+CREATE TABLE `today_roomc` (
+  `period1` text NOT NULL,
+  `period2` text NOT NULL,
+  `period3` text NOT NULL,
+  `period4` text NOT NULL,
+  `period5` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- 資料表的匯出資料 `today_roomc`
+--
+
+INSERT INTO `today_roomc` (`period1`, `period2`, `period3`, `period4`, `period5`) VALUES
+('111111111111111111111111111111111111111111110111010101111', '111111111111111111111111111111111111111111111111111111111', '111111111111111111111111111111111111111111111111111111111', '111111111111111111111111111111111111111111111111111111011', '111111111101111111111111111110111111101111111111111111111');
+
+-- --------------------------------------------------------
+
+--
+-- 資料表結構 `tomorrow_rooma`
+--
+
+CREATE TABLE `tomorrow_rooma` (
+  `period1` text NOT NULL,
+  `period2` text NOT NULL,
+  `period3` text NOT NULL,
+  `period4` text NOT NULL,
+  `period5` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- 資料表的匯出資料 `tomorrow_rooma`
+--
+
+INSERT INTO `tomorrow_rooma` (`period1`, `period2`, `period3`, `period4`, `period5`) VALUES
+('111111111111111111111111111111111111111111110111010101111', '111111111111111111111111111111111111111111111111111111111', '111111111111111111111111111111111111111111111111111111111', '111111111111111111111111111111111111111111111111111111011', '111111111101111111111111111110111111101111111111111111111');
+
+-- --------------------------------------------------------
+
+--
+-- 資料表結構 `tomorrow_roomb`
+--
+
+CREATE TABLE `tomorrow_roomb` (
+  `period1` text NOT NULL,
+  `period2` text NOT NULL,
+  `period3` text NOT NULL,
+  `period4` text NOT NULL,
+  `period5` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- 資料表的匯出資料 `tomorrow_roomb`
+--
+
+INSERT INTO `tomorrow_roomb` (`period1`, `period2`, `period3`, `period4`, `period5`) VALUES
+('111111111111111111111111111111111111111111110111010101111', '111111111111111111111111111111111111111111111111111111111', '111011111110111111111111111111111111111111111111111111111', '111111111111111111111111111111111111111111111111111111011', '111111111101111111111111111110111111101111111111111111111');
+
+-- --------------------------------------------------------
+
+--
+-- 資料表結構 `tomorrow_roomc`
+--
+
+CREATE TABLE `tomorrow_roomc` (
+  `period1` text NOT NULL,
+  `period2` text NOT NULL,
+  `period3` text NOT NULL,
+  `period4` text NOT NULL,
+  `period5` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- 資料表的匯出資料 `tomorrow_roomc`
+--
+
+INSERT INTO `tomorrow_roomc` (`period1`, `period2`, `period3`, `period4`, `period5`) VALUES
+('111111111111111111111111111111111111111111110111010101111', '111111111111111111111111111111111111111111111111111111111', '111111111111111111111111111111111111111111111111111111111', '111111111111111111111111111111111111111111111111111111011', '111111111110111101111110110111111111101111111111111111111');
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

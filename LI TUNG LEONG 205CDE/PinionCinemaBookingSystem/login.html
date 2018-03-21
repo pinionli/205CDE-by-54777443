@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	
+	<title> Pinion Cinema </title>
+
+	<style>
+	
+	* {
+	box-sizing: border-box;
+	}
+	
+	h1 {
+    font-family: Arial;
+    font-size: 24px;
+	margin: 0;
+	}
+
+	.content {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    width: 100%;
+    padding: 10px;
+	}
+	
+	#hp_button{
+    width: 200px;
+    font-size: 24px;
+    padding: 12px;
+    border: none;
+	background: #aaa;
+    color: black;
+    cursor: pointer;
+	}
+
+	#hp_button:hover{
+    background: #000;
+    color: white;
+	}
+	
+	#bgvideo {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+	}
+	</style>
+</head>
+
+<body>
+	
+	<div id="bg">
+	<video autoplay muted loop id="bgvideo">
+	<source src="mystuff/bgvideo.mp4" type="video/mp4"><!-- https://www.videvo.net/video/film-reel-background-1-/303/ -->
+	</video>
+	</div>
+
+	<div class="content">
+		<h1>Pinion Cinema Booking System</h>
+		<input id="hp_button" type="button" onclick="location.href='mystuff/news.html';" value="Customer" />
+		<form action="http://localhost/staff.php">
+		<input type="text" id ="name" name="name" value="name">
+		<input type="password" id ="pw" name="pw" value="password">
+		<input type="checkbox" onclick="showpw()" style="color: black;">Show Password
+		<input id="hp_button" type="submit" value="Staff">
+		
+		</form> 
+	</div>
+
+
+	
+	<script>
+	function showpw() {
+    var x = document.getElementById("pw");
+    if (x.type === "password") {
+        x.type = "text";
+    } else {
+        x.type = "password";
+    }
+}
+	</script>
+	
+</body>
+
+</html>

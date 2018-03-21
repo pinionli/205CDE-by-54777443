@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<head>
+	<title>News</title>
+  
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+	<script src="../bootstrap/bootstrap.js"></script>
+	<style>
+	
+
+	
+	#date{
+	color:white;
+	}
+	
+	*{box-sizing: border-box
+	}
+
+	body {
+	font-family: Arial;
+	}
+
+
+	.container {
+	position: absolute;
+	}
+
+
+	.left, .right {
+	cursor: pointer;
+	position: relative;
+	padding: 20px;
+	font-size: 24px;
+	color: white;
+	transition: 1s ease;
+	background-color: black;
+	}
+
+
+
+	.text {
+	color: Gold;
+	font-size: 24px;
+	position: absolute;
+	bottom: -50px;
+	width: 100%;
+	text-align: left;
+	}
+
+	img {
+	vertical-align: middle;
+	class: center;
+	}
+
+	</style>
+</head>
+<body>
+
+<!-- https://image.freepik.com/free-photo/crop-clapperboard-on-black-background_23-2147698844.jpg -->
+<img src='bg.jpg' style='position:fixed;top:0px;left:0px;width:100%;height:100%;z-index:-1;'>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+	<!-- https://www.freepik.com/free-vector/cinema-background_781647.htm#term=cinema&page=1&position=2 -->
+	<a class="navbar-brand" href="../login.html">Return</a>
+
+	<!--  -->
+	<ul class="navbar-nav">
+		<li class="nav-item">
+			<a class="nav-link" href="news.html">News</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="view.html">View Booking Status</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="about_us.html">About US</a>
+		</li>
+	</ul>
+	
+</nav>
+
+<p id="date"></p>
+<script>document.getElementById("date").innerHTML = Date();</script>
+
+<br>
+<div class="container">
+
+<div class="pages">
+	<img src="today1.jpg"><!-- https://www.humblebundle.com/store/agecheck/tomb-raider -->
+	<div class="text">Today RoomA: Tomb Raider</div>
+</div>
+
+<div class="pages">
+	<img src="today2.jpg"><!-- https://1.bp.blogspot.com/--_oVnGiQjws/Wmo8rg6fpZI/AAAAAAAAKUg/TPvRYF5mKF8X_nt8XKAuL4dU02QK7pY8gCLcBGAs/s1600/last-flag-flying-poster.jpg -->
+	<div class="text">Today RoomB: Last Flag Flying</div>
+</div>
+
+<div class="pages">
+	<img src="today3.jpg"><!-- https://aandmdiary.com/wp-content/uploads/2018/02/%E6%88%91%E7%9A%84%E6%83%85%E6%95%B5%E5%A5%B3%E5%A9%BF-%E5%BD%B1%E8%A9%95-%E8%A9%95%E8%AB%96-%E9%9B%BB%E5%BD%B1-%E6%8E%A8%E8%96%A6-%E9%9B%BB%E5%BD%B1%E8%A9%95%E5%83%B9-%E9%9B%BB%E5%BD%B1%E8%A9%95%E8%AB%96-%E6%9C%80%E6%96%B0%E5%BD%B1%E8%A9%95-%E8%91%89%E5%BF%B5%E7%90%9B-%E4%BB%BB%E9%81%94%E8%8F%AF-%E8%A1%9B%E8%A9%A9%E9%9B%85-%E5%8A%89%E5%98%89%E7%8E%B2-%E5%A7%9C%E7%9A%93%E6%96%87-%E7%8E%8B%E8%8F%80%E4%B9%8B-%E6%96%B9%E5%8A%9B%E7%94%B3-movie-review-movie-A-Beautiful-Moment-880x445-1.jpg -->
+	<div class="text">Today RoomC: A Beautiful Moment </div>
+</div>
+
+<div class="pages">
+	<img src="upcoming1.jpg"><!-- https://i1.wp.com/yamazaki-kento.com/wp-content/uploads/2017/01/saikikusuomain.png?resize=768%2C427 -->
+	<div class="text">Upcoming: Psychic Kusuo </div>
+</div>
+<div class="pages">
+	<img src="upcoming2.jpg"><!-- http://www.nintendolife.com/news/2017/11/movie_review_pokemon_the_movie_i_choose_you -->
+	<div class="text">Upcoming: I Choose You </div>
+</div>
+<div class="pages">
+	<img src="upcoming3.jpg" ><!--  https://static.stereogum.com/uploads/2018/02/Peter-Rabbit-1518184134-640x480.jpg -->  
+	<div class="text">Upcoming: Peter Rabbit </div>
+</div>
+
+<a class="left" onclick="rightpage(-1)"> ← </a>
+<a class="right" onclick="rightpage(1)"> → </a>
+
+</div>
+<br>
+
+
+<script>
+var temp = 1;
+	display(temp);
+
+function rightpage(n) {
+	display(temp += n);
+	}
+
+function display(n) {
+	var i;
+	var page = document.getElementsByClassName("pages");
+  
+	if (n > 6) {
+	temp = 1
+	}
+	if (n < 1) {temp = 6}
+  
+	for (i = 0; i < 6; i++) {
+		page[i].style.display = "none";  
+  }
+  
+	page[temp-1].style.display = "block";  
+  
+  
+}
+</script>
+</body>
+</html>

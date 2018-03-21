@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>View Booking Status</title>
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+	<script src="../bootstrap/js/bootstrap.js"></script>
+	<style>
+	h1,#date{
+	color:white;
+	}
+	
+	.btn-group{
+	width:100%;
+	}
+	
+	button{
+	width:12.5%;
+	}
+	
+	
+	
+	#button2{
+    width: 200px;
+    font-size: 12px;
+    padding: 12px;
+    border: none;
+	background: #aaa;
+    color: black;
+    cursor: pointer;
+	}
+	
+	#button2:hover{
+    background: #000;
+    color: white;
+	}
+	</style>
+	
+</head>
+<body>
+<!-- https://image.freepik.com/free-photo/crop-clapperboard-on-black-background_23-2147698844.jpg 
+
+11111111111111111111111111111111111111111111111111111111
+11111011011101111100000011111111100011111111111111111110
+-->
+<img src='bg.jpg' style='position:fixed;top:0px;left:0px;width:100%;height:100%;z-index:-1;'>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+	
+	<a class="navbar-brand" href="../login.html">Return</a>
+
+	<ul class="navbar-nav">
+		<li class="nav-item">
+			<a class="nav-link" href="news.html">News</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="view.html">View Booking Status</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="about_us.html">About US</a>
+		</li>
+	</ul>
+</nav>
+
+<p id="date"></p>
+
+<div class="search">
+	<select id="day">
+		<option value="today">Today</option>
+		<option value="tomorrow">Tomorrow</option>
+	</select>
+	<select id="room">
+		<option value="rooma">Room A</option>
+		<option value="roomb">Room B</option>
+		<option value="roomc">Room C</option>
+	</select>
+	<select id="period">
+		<option value="period1">08:00-10:30</option>
+		<option value="period2">11:00-13:30</option>
+		<option value="period3">14:00-16:30</option>
+		<option value="period4">17:00-19:30</option>
+		<option value="period5">20:00-22:30</option>
+	</select>
+	<br>
+	<button id="button2" class="button" onclick="reset()">Reset Dropdown Choice</button>
+	<button id="button2" class="button" onclick="searc()">Click 2 time to Search</button>
+</div>
+
+
+<h1>===========Screen===========</h1>
+<br>
+
+<div class="btn-group">
+	<button  id="1" onclick="press(1)" >A1</button>
+	<button  id="2" onclick="press(2)" >A2</button>
+	<button  id="3" onclick="press(3)" >A3</button>
+	<button  id="4" onclick="press(4)" >A4</button>
+	<button  id="5" onclick="press(5)" >A5</button>
+	<button  id="6" onclick="press(6)" >A6</button>
+	<button  id="7" onclick="press(7)" >A7</button>
+	<button  id="8" onclick="press(8)" >A8</button>
+</div>
+<br><div class="btn-group" >
+	<button  id="9" onclick="press(9)" >B1</button>
+	<button  id="10" onclick="press(10)" >B2</button>
+	<button  id="11" onclick="press(11)" >B3</button>
+	<button  id="12" onclick="press(12)" >B4</button>
+	<button  id="13" onclick="press(13)" >B5</button>
+	<button  id="14" onclick="press(14)" >B6</button>
+	<button  id="15" onclick="press(15)" >B7</button>
+	<button  id="16" onclick="press(16)" >B8</button>
+</div>
+<br><div class="btn-group">
+	<button  id="17" onclick="press(17)" >C1</button>
+	<button  id="18" onclick="press(18)" >C2</button>
+	<button  id="19" onclick="press(19)" >C3</button>
+	<button  id="20" onclick="press(20)" >C4</button>
+	<button  id="21" onclick="press(21)" >C5</button>
+	<button  id="22" onclick="press(22)" >C6</button>
+	<button  id="23" onclick="press(23)" >C7</button>
+	<button  id="24" onclick="press(24)" >C8</button>
+</div>
+<br><div class="btn-group"  >
+	<button  id="25" onclick="press(25)" >D1</button>
+	<button  id="26" onclick="press(26)" >D2</button>
+	<button  id="27" onclick="press(27)" >D3</button>
+	<button  id="28" onclick="press(28)" >D4</button>
+	<button  id="29" onclick="press(29)" >D5</button>
+	<button  id="30" onclick="press(30)" >D6</button>
+	<button  id="31" onclick="press(31)" >D7</button>
+	<button  id="32" onclick="press(32)" >D8</button>
+</div>
+<br><div class="btn-group"  >
+	<button  id="33" onclick="press(33)" >E1</button>
+	<button  id="34" onclick="press(34)" >E2</button>
+	<button  id="35" onclick="press(35)" >E3</button>
+	<button  id="36" onclick="press(36)" >E4</button>
+	<button  id="37" onclick="press(37)" >E5</button>
+	<button  id="38" onclick="press(38)" >E6</button>
+	<button  id="39" onclick="press(39)" >E7</button>
+	<button  id="40" onclick="press(40)" >E8</button>
+</div>
+<br><div class="btn-group"  >
+	<button  id="41" onclick="press(41)" >F1</button>
+	<button  id="42" onclick="press(42)" >F2</button>
+	<button  id="43" onclick="press(43)" >F3</button>
+	<button  id="44" onclick="press(44)" >F4</button>
+	<button  id="45" onclick="press(45)" >F5</button>
+	<button  id="46" onclick="press(46)" >F6</button>
+	<button  id="47" onclick="press(47)" >F7</button>
+	<button  id="48" onclick="press(48)" >F8</button>
+</div>
+<br><div class="btn-group"  >
+	<button  id="49" onclick="press(49)" >G1</button>
+	<button  id="50" onclick="press(50)" >G2</button>
+	<button  id="51" onclick="press(51)" >G3</button>
+	<button  id="52" onclick="press(52)" >G4</button>
+	<button  id="53" onclick="press(53)" >G5</button>
+	<button  id="54" onclick="press(54)" >G6</button>
+	<button  id="55" onclick="press(55)" >G7</button>
+	<button  id="56" onclick="press(56)" >G8</button>
+</div>
+<h1>============Exit============</h1>
+
+	<script type="text/javascript">
+
+	
+	function searc(){
+		var day = document.getElementById('day').value;
+		var room = document.getElementById('room').value;
+		var period = document.getElementById('period').value;
+		var script = document.createElement('script');
+		
+		script.src = "http://localhost/book.php?day="+day+"&room="+room+"&period="+period;
+		document.getElementsByTagName('script')[0].parentNode.appendChild(script);
+		
+		search();
+	}
+	</script>  
+	
+
+<script type="text/javascript">
+	
+		
+	function search(){
+		var count = 0;
+		var x = string.length;
+		
+		for (i = 1; i < 57; i++) {
+			if	(string[i-1] == "1") {
+				count += 1;
+				document.getElementById(i).style.color='#FFFFFF';
+				document.getElementById(i).style.background='#000000';
+			}
+			if	(string[i-1] == "0") {
+				document.getElementById(i).style.color='#000000';
+				document.getElementById(i).style.background='#FFFFFF';
+			}
+			}
+		
+		
+	}
+	function reset() {
+		document.getElementById("day").value = "today";
+		document.getElementById("room").value = "rooma";
+		document.getElementById("period").value = "period1";
+	}
+	
+	document.getElementById("date").innerHTML = Date();
+</script>
+
+</body>
+</html>
